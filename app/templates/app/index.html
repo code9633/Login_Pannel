@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Pannel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet" >
+    <link rel="stylesheet" href="static/app/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="body d-md-flex align-items-center justify-content-between">
+            <div class="box-1 mt-md-0 mt-5">
+                <img src="https://images.pexels.com/photos/2033997/pexels-photo-2033997.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500">
+            </div>
+                
+            <div class=" box-2 d-flex flex-column h-100">
+                <div class="mt-5">
+                    <p class="mb-1 h-1">Hello,Again</p>
+                    <p class="text-muted mb-2">We are happy to have you back</p>
+                    <div class="d-flex flex-column login-container">
+
+                        <form action="./result" method="POST">
+                            {% csrf_token %}
+                            
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Email *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Your Password *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" class="btn" value="Login" />
+                            </div>
+                            <div class="form-group">
+                                <a href="#" class="ForgetPwd">Forget Password?</a>
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+                <div class="mt-auto">
+                    <p class="footer text-muted mb-0 mt-md-0 mt-4">By register you agree with our
+                        <span class="p-color me-1">terms and conditions</span>and
+                        <span class="p-color ms-1">privacy policy</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
